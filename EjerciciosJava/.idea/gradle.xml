@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/src" />
+            <option value="$PROJECT_DIR$/src/main" />
+            <option value="$PROJECT_DIR$/src/main/ex10_propinaCalc" />
+            <option value="$PROJECT_DIR$/src/main/ex11_ordTresNum" />
+            <option value="$PROJECT_DIR$/src/main/ex12_CalcHoroscopo" />
+            <option value="$PROJECT_DIR$/src/main/ex1_calculadora" />
+            <option value="$PROJECT_DIR$/src/main/ex2_validEdad" />
+            <option value="$PROJECT_DIR$/src/main/ex3_convUnidades" />
+            <option value="$PROJECT_DIR$/src/main/ex4_IMC" />
+            <option value="$PROJECT_DIR$/src/main/ex5_clasNum" />
+            <option value="$PROJECT_DIR$/src/main/ex6_calcDiaMes" />
+            <option value="$PROJECT_DIR$/src/main/ex7_menuInteractivo" />
+            <option value="$PROJECT_DIR$/src/main/ex8_calcProm" />
+            <option value="$PROJECT_DIR$/src/main/ex9_CalcBisiesto" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
