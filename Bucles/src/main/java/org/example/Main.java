@@ -84,14 +84,14 @@ public class Main {
 //        }
         //Escribe un programa en Java que calcule e imprima el factorial de un
         //número dado.
-//        System.out.println("Hello and welcome to the program to find the factorial of any number");
-//        int num = scanner.nextInt();
-//        int num1 = num;
-//        int result = 1;
-//        for (int i = num; i >= 1 ; i--) {
-//            result = result*num1;
-//            num1=num1-1;
-//        }
-//        System.out.println("The factorial of "+num+" equals to: "+result);
+        System.out.println("Hello and welcome to the program to find the factorial of any number");
+        int num = scanner.nextInt();
+        int num1 = num;
+        int result = 1;
+        for (int i = num; i >= 1 ; i--) {
+            result = result*num1;
+            num1=num1-1;
+        }
+        System.out.println("The factorial of "+num+" equals to: "+result);
     }
 }
