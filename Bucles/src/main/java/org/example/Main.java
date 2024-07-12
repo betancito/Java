@@ -62,36 +62,36 @@ public class Main {
 //        }
         //Escribe un programa en Java que imprima un patrón de asteriscos en
         //forma de rombo.
-//        System.out.println("Hello and welcome to the program to print a diamond shape \nnext up provide the desired size:");
-//        int n = scanner.nextInt();
-//        for (int i = 1; i < n; i++) {
-//            for (int j = 1; j <= n-i; j++) {
-//                System.out.print(" ");
-//            }
-//            for (int j = 1; j <= 2*i-1; j++) {
-//                System.out.print("*");
-//            }
-//            System.out.println();
-//        }
-//        for (int i = n - 1; i >= 0; i--) {
-//            for (int j = 1; j <= n - i; j++) {
-//                System.out.print(" ");
-//            }
-//            for (int j = 1; j <= 2 * i - 1; j++) {
-//                System.out.print("*");
-//            }
-//            System.out.println();
-//        }
+        System.out.println("Hello and welcome to the program to print a diamond shape \nnext up provide the desired size:");
+        int n = scanner.nextInt();
+        for (int i = 1; i < n; i++) {
+            for (int j = 1; j <= n-i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2*i-1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
         //Escribe un programa en Java que calcule e imprima el factorial de un
         //número dado.
-        System.out.println("Hello and welcome to the program to find the factorial of any number");
-        int num = scanner.nextInt();
-        int num1 = num;
-        int result = 1;
-        for (int i = num; i >= 1 ; i--) {
-            result = result*num1;
-            num1=num1-1;
-        }
-        System.out.println("The factorial of "+num+" equals to: "+result);
+//        System.out.println("Hello and welcome to the program to find the factorial of any number");
+//        int num = scanner.nextInt();
+//        int num1 = num;
+//        int result = 1;
+//        for (int i = num; i >= 1 ; i--) {
+//            result = result*num1;
+//            num1=num1-1;
+//        }
+//        System.out.println("The factorial of "+num+" equals to: "+result);
     }
 }

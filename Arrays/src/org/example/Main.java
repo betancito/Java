@@ -39,59 +39,77 @@ public class Main {
         //un array de productos y un array de precios. Se requiere pedir al
         //usuario la cantidad de cada producto que desea comprar, para
         //posteriormente imprimir el valor total de la factura.
-        System.out.println("Hello and welcome to the cashier app. Next up you'll see the products list with each price");
-        String[] groceryProducts = {
-                "Apples",
-                "Milk",
-                "Bread",
-                "Eggs",
-                "Cheese",
-                "Chicken",
-                "Rice",
-                "Tomatoes",
-                "Bananas",
-                "Yogurt"
-        };
-        double[] groceryPrices = {
-                20.49,
-                10.99,
-                20.29,
-                30.49,
-                40.99,
-                70.99,
-                10.79,
-                10.69,
-                5.79,
-                9.99
-        };
-        for (int i = 0; i < groceryProducts.length; i++) {
-            String product = groceryProducts[i];
-            double price = groceryPrices[i];
-            System.out.println(i+" -"+product+" :: $"+price);
-        }
-        double total = 0;
-        System.out.println();
-        System.out.println();
-        for (int i = 0; i < 100; i++) {
-            System.out.println("Next up please select what do you want to do \n1. Buy an item \n2. See total to pay \n3. Exit");
-            int op = scanner.nextInt();
-            if (op==1){
-                System.out.println("Please provide the index of the product to be bought");
-                int product = scanner.nextInt();
-                System.out.println("Please provide the amount of that following item");
-                int amount = scanner.nextInt();
-                total = total+(groceryPrices[product]*amount);
-                double totalDiscounted;
-                if(total<200){
-                    totalDiscounted=total;
-
-                }
-            } else if (op==2) {
-                System.out.println("Your total is: $"+total);
-            }else{
-                break;
-            }
-        }
+//        System.out.println("Hello and welcome to the cashier app. Next up you'll see the products list with each price");
+//        String[] groceryProducts = {
+//                "Apples",
+//                "Milk",
+//                "Bread",
+//                "Eggs",
+//                "Cheese",
+//                "Chicken",
+//                "Rice",
+//                "Tomatoes",
+//                "Bananas",
+//                "Yogurt"
+//        };
+//        double[] groceryPrices = {
+//                20.49,
+//                10.99,
+//                20.29,
+//                30.49,
+//                40.99,
+//                70.99,
+//                10.79,
+//                10.69,
+//                5.79,
+//                9.99
+//        };
+//        for (int i = 0; i < groceryProducts.length; i++) {
+//            String product = groceryProducts[i];
+//            double price = groceryPrices[i];
+//            System.out.println(i+" -"+product+" :: $"+price);
+//        }
+//        double total = 0;
+//        System.out.println();
+//        System.out.println();
+//        for (int i = 0; i < 100; i++) {
+//            System.out.println("Next up please select what do you want to do \n1. Buy an item \n2. See total to pay \n3. Exit");
+//            int op = scanner.nextInt();
+//            if (op==1){
+//                System.out.println("Please provide the index of the product to be bought");
+//                int product = scanner.nextInt();
+//                System.out.println("Please provide the amount of that following item");
+//                int amount = scanner.nextInt();
+//                total = total+(groceryPrices[product]*amount);
+//            } else if (op==2) {
+//                double totalDiscounted = 0;
+//                double totalDiscount;
+//                String discountAmnt = "";
+//                if(total<200){
+//                    totalDiscounted=total;
+//                    discountAmnt = "0%";
+//                } else if (total>=200 && total<300) {
+//                    totalDiscount=(total*0.1);
+//                    totalDiscounted = total-totalDiscount;
+//                    discountAmnt = "10%";
+//                }else if (total>=300 && total<500){
+//                    totalDiscount=(total*0.15);
+//                    totalDiscounted = total-totalDiscount;
+//                    discountAmnt = "15%";
+//                } else if (total>=500&&total<1000) {
+//                    totalDiscount=(total*0.2);
+//                    totalDiscounted = total-totalDiscount;;
+//                    discountAmnt = "20%";
+//                } else if (total>=1000) {
+//                    totalDiscount=(total*0.25);
+//                    totalDiscounted = total-totalDiscount;
+//                    discountAmnt = "25%";
+//                }
+//                System.out.println("Your total is: $"+total+" but after a discount of "+discountAmnt+" Your new total will be $"+totalDiscounted);
+//            }else{
+//                break;
+//            }
+//        }
         //Crea un programa que calcula la calificación promedio que se necesita
         //obtener en las notas faltantes de un curso para aprobarlo,
         //considerando la cantidad de calificaciones totales, las calificaciones ya
@@ -125,5 +143,10 @@ public class Main {
         //en una tienda, donde se aplica un porcentaje de descuento en función
         //del monto total de la compra, con rangos de precios personalizados.
                 //Go back to exercise #2 and you'll find the discounts code being applied there
+
+        //Un programa que permita al usuario ingresar un texto y luego le da la
+        //opción de buscar una palabra específica, mostrando como resultado
+        //el rango de posiciones donde se encontró la palabra exacta. (Sin darle
+        //importancia a mayúsculas o minúsculas)
     }
 }
