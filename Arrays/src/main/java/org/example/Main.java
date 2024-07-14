@@ -1,7 +1,6 @@
 package org.example;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -25,9 +24,9 @@ public class Main {
         }
     }
     public static void printMatrix(int[][] matrix) {
-        for (int[] row : matrix) {
-            for (int value : row) {
-                System.out.print(value + " ");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
             }
             System.out.println();
         }
@@ -248,29 +247,196 @@ public class Main {
         //Crea un programa que mire dentro de un array, si hay elementos
         //repetidos y los cuente e imprima en pantalla en orden del elemento
         //que más se repite al que menos.
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 14, 15, 2, 16, 17, 18};
-        int maxNum = array[0];
-        for (int num:array) {
-            if(num>maxNum){
-                maxNum=num;
-            }            
-        }
-        int[] newArray = new int[maxNum];
-        for (int i = 0; i < maxNum; i++) {
-            newArray[i] = i+1;
-        }
-        System.out.println(Arrays.toString(newArray));
-        int [][] counter = new int[maxNum+1][3];
-        for (int i = 1; i < newArray.length+1; i++) {
-            counter[i][0]=i;
-            counter[i][1]=0;
-            for (int j = 1; j < array.length; j++) {
-                if (newArray[i]==array[j]){
-                    counter[i][2]++;
-                }
-            }
-        }
-        printMatrix(counter);
+//        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1, 14, 15, 2, 16, 17, 18};
+//        int maxNum = array[0];
+//        for (int num:array) {
+//            if(num>maxNum){
+//                maxNum=num;
+//            }
+//        }
+//        int[] newArray = new int[maxNum];
+//        for (int i = 0; i < maxNum; i++) { //DESPUÉS DE INTENTARLO MUCHAS VECES NO LOGRE QUE ACOMODARA LAS OCURRENCIAS DE MAYOR A MENOR
+//            newArray[i] = i+1;
+//        }
+//        System.out.println(Arrays.toString(newArray));
+//        int [][] counter = new int[maxNum][2];
+//        for(int i=0;i<newArray.length;i++){
+//            counter [i][0] = i+1;
+//            int num = newArray[i];
+//            for (int j = 0; j < array.length; j++) {
+//                int value = array[j];
+//                if (num== value){
+//                    counter[i][1]=counter[i][1]+1;
+//                }
+//            }
+//        }
+//        printMatrix(counter);
+        //Escribe un programa en Java que invierta el orden de los elementos
+        //en un array de números enteros.(Sin métodos)
+//        int [] numArray = {1,2,3,4,5,6,7,8,9,10};
+//        for (int i = 0; i < numArray.length; i++) {
+//            System.out.print(numArray[i]+", ");
+//        }
+//        System.out.println();
+//        int lenarr = numArray.length;
+//        for (int i = 0; i < (lenarr/2) ; i++) {
+//            int temp = numArray[i];
+//            numArray[i] = numArray[lenarr-1-i];
+//            numArray[lenarr-1-i] = temp;
+//        }
+//        for (int i = 0; i < numArray.length; i++) {
+//            System.out.print(numArray[i]+", ");
+//        }
+        //Investigar que es un arraylists y hacer ejemplos con los tipos de datos
+        //que se han visto hasta el momento, también mirar los métodos que
+        //tienen y hacer ejemplos.
+            //forma base
+//        ArrayList<tipoElemento>nombreArraylist=new ArrayList<>();
+            //int
+//        ArrayList<Integer> intList = new ArrayList<>();
+//        intList.add(1);
+//        intList.add(2);
+//        intList.add(3);
+//        System.out.println("Arraylist Int "+intList);
+//            //Float
+//        ArrayList<Float> floatList = new ArrayList<>();
+//        floatList.add(1.0f);
+//        floatList.add(2.0f);
+//        floatList.add(3.0f);
+//        System.out.println(floatList);
+//            //double
+//        ArrayList<Double> doubleList = new ArrayList<>();
+//        doubleList.add(1.00);
+//        doubleList.add(2.00);
+//        doubleList.add(3.00);
+//        System.out.println(doubleList);
+//            //char
+//        ArrayList<Character> charList = new ArrayList<>();
+//        charList.add('a');
+//        charList.add('b');
+//        charList.add('c');
+//        System.out.println(charList);
+//            //string
+//        ArrayList<String> stringList = new ArrayList<>();
+//        stringList.add("aaa");
+//        stringList.add("bbb");
+//        stringList.add("ccc");
+//        System.out.println(stringList);
+//            //boolean
+//        ArrayList<Boolean>booleanList = new ArrayList<>();
+//        booleanList.add(true);
+//        booleanList.add(false);
+//        System.out.println(booleanList);
+//    //Metodos
+//        //add(E e): Añade un elemento al final del ArrayList.
+//        //add(int index, E element): Añade un elemento en una posición específica.
+//        //get(int index): Devuelve el elemento en la posición especificada.
+//        //set(int index, E element): Reemplaza el elemento en la posición especificada con el elemento dado.
+//        //remove(int index): Elimina el elemento en la posición especificada.
+//        //size(): Devuelve el número de elementos en el ArrayList.
+//        //clear(): Elimina todos los elementos del ArrayList.
+//        //isEmpty(): Devuelve true si el ArrayList está vacío.
+//        //contains(Object o): Devuelve true si el ArrayList contiene el elemento especificado.
+//    //Ejemplos Metodos
+//        //Obtener tamaño Arraylist
+//        System.out.println("Arraylist Boolean size "+booleanList.size());
+//        //Obtener un elemento
+//        System.out.println("Arraylist char at index 1 "+ charList.get(1));
+//        //Modificar elemeto
+//        charList.set(2, 'p');
+//        System.out.println("Arraylist char at index 2 "+ charList.get(2));
+//        //Eliminar Elemento
+//        charList.remove(2);
+//        System.out.println(charList);
+//        //Verificar si contiene elemento
+//        System.out.println("Stringlist includes aaa "+ stringList.contains("aaa"));
+//        //limpiar el arraylist
+//        intList.clear();
+//        System.out.println("is the arraylist for int cleared? "+intList.isEmpty());
+        //Investigar que es un maps y hacer ejemplos con los tipos de datos que
+        //se han visto hasta el momento, también mirar los métodos que tienen
+        //y hacer ejemplos.
+            //forma base
+//        Map<tipoDato, tipoDato...> mimapa = new HashMap<>();
+        //int, string
+//        Map<Integer, String> mapa1=new HashMap<>();
+//            //Agregar items
+//        mapa1.put(1,"uno");
+//        mapa1.put(2,"dos");
+//        mapa1.put(3,"tres");
+//            //acceder a elementos
+//        System.out.println(mapa1.get(1));
+//            //eliminar elementos
+//        mapa1.remove(3);
+//            //Verificar si clave existe
+//        boolean existe = mapa1.containsKey(2);
+//        System.out.println("¿Existe la clave 2? "+existe);
+//            //obtener numero elementos
+//        int size = mapa1.size();
+//        System.out.println("Tamaño mapa: "+ size);
+        //Abstracción
+        //La abstracción consiste en simplificar la complejidad del mundo real al modelar objetos en términos de sus características esenciales, sin incluir detalles innecesarios. En OOP, esto se logra mediante la creación de clases que definen las propiedades y comportamientos comunes de los objetos.
+        //abstract class Animal {
+        //    String nombre;
+        //    int edad;
+        //abstract void hacerSonido();
+        //}
+        //
+        //class Perro extends Animal {
+        //    void hacerSonido() {
+        //        System.out.println("Guau");
+        //    }
+        //}
+        //ENCAPSULAMIENTO
+        //El encapsulamiento es el principio de ocultar los detalles internos de un objeto y exponer solo lo necesario a través de métodos públicos. Esto protege los datos y asegura que los objetos se manipulen de manera controlada.
+    //class CuentaBancaria {
+        //    private double saldo;
+        //
+        //    public void depositar(double cantidad) {
+        //        if (cantidad > 0) {
+        //            saldo += cantidad;
+        //        }
+        //    }
+        //
+        //    public double obtenerSaldo() {
+        //        return saldo;
+        //    }
+        //}
+
+        //HERENCIA
+        //La herencia permite crear nuevas clases basadas en clases existentes, reutilizando y extendiendo su funcionalidad. Esto facilita la creación de jerarquías de clases y promueve la reutilización de código.
+        //class Vehiculo {
+        //    String marca;
+        //    int año;
+        //}
+        //
+        //class Coche extends Vehiculo {
+        //    int numeroDePuertas;
+        //
+        //    void mostrarDetalles() {
+        //        System.out.println("Marca: " + marca + ", Año: " + año + ", Puertas: " + numeroDePuertas);
+        //    }
+        //}
+        //POLIMORFISMO
+        //El polimorfismo permite que los objetos de diferentes clases se traten como objetos de una clase común. Esto se logra mediante la sobrecarga y la sobrescritura de métodos, permitiendo que el mismo método tenga diferentes comportamientos según el objeto que lo invoque.
+        //class Animal {
+        //    void hacerSonido() {
+        //        System.out.println("Sonido de animal");
+        //    }
+        //}
+        //
+        //class Gato extends Animal {
+        //    void hacerSonido() {
+        //        System.out.println("Miau");
+        //    }
+        //}
+        //
+        //public class Main {
+        //    public static void main(String[] args) {
+        //        Animal miAnimal = new Gato();
+        //        miAnimal.hacerSonido();  // Salida: Miau
+        //    }
+        //}
     }
 }
 
