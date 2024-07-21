@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e617cf5a-9856-4968-a28c-519ef2f6aa0c" name="Changes" comment="" />
+    <list default="true" id="e617cf5a-9856-4968-a28c-519ef2f6aa0c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO2.0/src/main/java/org/example/Inventario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO2.0/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO2.0/src/main/java/org/example/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/POO2.0/src/main/java/org/example/ProductoEspecifico.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +46,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/riwip5-011/Desktop/Java/POO",
+    "last_opened_file_path": "C:/Users/rando/OneDrive/Escritorio/Java/POO 2.0",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -60,6 +73,7 @@
       <updated>1720909929932</updated>
       <workItem from="1720909930956" duration="17000" />
       <workItem from="1721186884960" duration="26000" />
+      <workItem from="1721579106739" duration="686000" />
     </task>
     <servers />
   </component>
