@@ -48,16 +48,4 @@ public class GestionCursos {
         }
         return curso1;
     }
-    public static void main(String[] args){
-        Curso cursoxd =  new Curso();
-        cursoxd.setCodigo(2002);
-        cursoxd.setNombre("ingles");
-        Curso curso1 = new Curso();
-        curso1.setCodigo(2003);
-        curso1.setNombre("español");
-        GestionCursos gestion = new GestionCursos();
-        gestion.agregarCurso(cursoxd);
-        gestion.agregarCurso(curso1);
-        System.out.println(gestion.buscarCursoPorCodigo(2003));
-    }
 }

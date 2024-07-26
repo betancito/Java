@@ -30,10 +30,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         GestionCursos gestion = new GestionCursos();
         boolean cond = false;
-        while (!cond){
-            System.out.println("A continuación ingrese que desea hacer \n0. Registrar cursos \n1. Registrar estudiantes dentro de un curso");
+        while (!cond) {
+            System.out.println("A continuación ingrese que desea hacer \n0. Registrar cursos \n1. Registrar estudiantes dentro de un curso \n2. Listar Estudiantes dentro del curso \n3. Salir");
+            System.out.println();
             int op = scanner.nextInt();
-            switch (op){
+            switch (op) {
                 case 0:
                     System.out.println("Defina la cantidad de cursos a ingresar");
                     int amnt = scanner.nextInt();
@@ -54,27 +55,64 @@ public class Main {
                         curso.setNombre(name);
                         //add curso to gestion
                         gestion.agregarCurso(curso);
+                        System.out.println("--siguiente curso--");
+                        System.out.println();
                     }
-                    gestion.listarCursos();
+                    break;
                 case 1:
-//                    System.out.println("Ingrese la cantidad de estudiantes a ingresar (los ids serán asignados automaticamente): ");
-//                    int count = scanner.nextInt()+ gestion.length();
-//                    for (int i = gestion.length(); i < count+ gestion.length(); i++) {
-//                        //Recolectar nombre
-//                        System.out.println("Ingrese el nombre del estudiante: ");
-//                        String name = scanner.next();
-//                        scanner.nextLine();
-//                        System.out.println();
-//
-//                        //Recolectar email
-//                        System.out.println("Ingrese el email del estudiante: ");
-//                        String email = scanner.next();
-//                        scanner.nextLine();
-//                        System.out.println();
-//                        System.out.println("--Siguiente estudiante--");
-//                        Estudiante estudiante = new Estudiante(i,name,email);
-//                        System.out.println(estudiante);
+                    //recolectar codigo dwel curso
+                    System.out.println("Ingrese el codigo del curso a ingresar los estudiantes");
+                    int codigo = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.println();
+
+                    //Extraer curso y cantidad estudiantes en el curso
+                    Curso curso = gestion.buscarCursoPorCodigo(codigo);
+                    int estudiantesCount = 0;
+                    if (curso != null) {
+                        estudiantesCount=curso.length();
+                    }else{
+                        System.out.println("El curso no existe");
+                        break;
                     }
+
+                    //Ingreso estudiantes
+                    System.out.println("Ingrese la cantidad de estudiantes a ingresar (los ids serán asignados automaticamente): ");
+                    int count = scanner.nextInt();
+                    for (int i = estudiantesCount; i < count+estudiantesCount;i++){
+                        //Recolectar nombre
+                        System.out.println("Ingrese el nombre del estudiante: ");
+                        String name = scanner.next();
+                        scanner.nextLine();
+                        System.out.println();
+
+                        //Recolectar email
+                        System.out.println("Ingrese el email del estudiante: ");
+                        String email = scanner.next();
+                        scanner.nextLine();
+                        System.out.println();
+                        System.out.println("--Siguiente estudiante--");
+
+                        //Crear objeto estudiante con info recolectada anteriormente
+                        Estudiante estudiante = new Estudiante(i, name, email);
+
+                        //add dentro de objeto curso
+                        curso.inscribirEstudiante(estudiante);
+                    }
+                    break;
+                case 2:
+                    //recolectar codigo
+                    System.out.println("Ingrese el codigo del curso: ");
+                    int cod = scanner.nextInt();
+                    scanner.nextLine();
+                    //listar estudiantes
+                    gestion.enlistarEstudiantesDeCurso(cod);
+                    break;
+                case 3:
+                    cond = true;
+                    break;
             }
         }
+        System.out.println("Gracias por usar el programa!");
     }
+}
