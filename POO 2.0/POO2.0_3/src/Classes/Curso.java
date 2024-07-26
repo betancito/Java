@@ -6,11 +6,8 @@ public class Curso {
     private Integer codigo;
     private String nombre;
     private ArrayList<Estudiante> ListaEstudiantes;
-    public Curso() {}
-    public Curso(Integer codigo, String nombre) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        ListaEstudiantes = new ArrayList<>();
+    public Curso() {
+        this.ListaEstudiantes = new ArrayList<>();
     }
     //Setters
     public void setCodigo(Integer codigo) {

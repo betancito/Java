@@ -36,6 +36,6 @@ public class Estudiante {
     }
     //tostring
     public String toString() {
-        return "Estudiante [id=" + id + ", nombre=" + nombre + ", email=" + email + "]";
+        return "Estudiante [id=" + getId() + ", nombre=" + getNombre() + ", email=" + getEmail() + "]";
     }
 }

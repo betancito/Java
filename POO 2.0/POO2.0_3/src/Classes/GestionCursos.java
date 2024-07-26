@@ -3,7 +3,7 @@ package Classes;
 import java.util.ArrayList;
 
 public class GestionCursos {
-    private ArrayList<Curso> listaCursos;
+    ArrayList<Curso> listaCursos;
     public GestionCursos() {
         this.listaCursos = new ArrayList<>();
     }
@@ -20,7 +20,6 @@ public class GestionCursos {
                 curso.inscribirEstudiante(estudiante);
             }
         }
-        System.out.println("Curso no encontrado");
     }
 
     //Enlistar estudiantes de curso

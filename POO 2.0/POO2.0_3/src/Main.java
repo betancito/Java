@@ -22,7 +22,11 @@ public class Main {
         IEbarros.inscribirPorCodigo(2003, estudiante3);
         IEbarros.inscribirPorCodigo(2002, estudiante3);
         IEbarros.inscribirPorCodigo(2003, estudiante);
-        IEbarros.enlistarEstudiantesDeCurso(2002);
+//        IEbarros.enlistarEstudiantesDeCurso(2002);
         IEbarros.enlistarEstudiantesDeCurso(2003);
+        boolean cond = false;
+        while (!cond){
+            System.out.println(Hello and welcome to the app to register );
+        }
     }
 }
