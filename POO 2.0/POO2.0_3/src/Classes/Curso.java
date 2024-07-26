@@ -32,4 +32,15 @@ public class Curso {
             System.out.println(estudiante);
         }
     }
+    public int length() {
+        int count = 0;
+        for (Estudiante estudiante : this.ListaEstudiantes) {
+            count = count +1;
+        }
+        return count;
+    }
+    //toString
+    public String toString(){
+        return "Curso || Nombre: " + getNombre() + "|| Código: " + getCodigo();
+    }
 }
