@@ -1,0 +1,33 @@
+create database avianca;
+use avianca;
+
+create table avion(
+id int auto_increment primary key,
+modelo varchar(100),
+capacidad int
+);
+create table vuelo(
+id int auto_increment primary key,
+destino varchar(100),
+fecha_salida date,
+hora_salida	time,
+id_avion int,
+foreign key (id_avion) references avion(id) on delete cascade
+);
+create table pasajero(
+id int auto_increment primary key,
+nombre varchar(100),
+apellido varchar(100),
+documento_identidad varchar(100)
+);
+create table reservacion(
+id int auto_increment primary key,
+id_pasajero int,
+foreign key (id_pasajero) references pasajero(id) on delete cascade,
+id_vuelo int,
+foreign key (id_vuelo) references vuelo(id) on delete cascade,
+fecha_reservación date,
+asiento varchar(100)
+);
+
+select * from avion;
